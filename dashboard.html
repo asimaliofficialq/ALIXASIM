@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e3f2fd;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px 20px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: green;
+      margin-bottom: 10px;
+    }
+    .username {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      padding: 14px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .logout-btn {
+      background-color: #ff4d4f;
+      margin-top: 20px;
+    }
+    .logout-btn:hover {
+      background-color: #d9363e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Welcome to Dashboard</h2>
+    <p class="username">You are successfully logged in as <strong>ALIXASIM</strong>.</p>
+
+    <a href="https://aliasimsimdetail.vercel.app" class="btn" target="_blank">
+      <i class="fas fa-globe"></i> Sim Database 1
+    </a>
+    <a href="https://asimsmm.site" class="btn" target="_blank">
+      <i class="fas fa-server"></i> SMM Panel
+    </a>
+    <a href="https://chat.whatsapp.com/HpXDLI1qnqwBDc4k5BqR4h" class="btn" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp Group
+    </a>
+    <a href="XtcsXtracker.html" class="btn">
+      <i class="fas fa-truck"></i> TCS Tracker
+    </a>
+
+    <a href="#" class="btn logout-btn">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+  </div>
+
+</body>
+  </html>
