@@ -3,37 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>𝐀𝐋𝐈𝐀𝐒𝐈𝐌 𝐌𝐎𝐃𝐒</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #e3f2fd;
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      box-sizing: border-box;
     }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 30px 20px;
-      max-width: 400px;
-      width: 90%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  overflow-y: auto; /* changed from hidden */
+  color: #fff;
+  min-height: 100vh;
+}
+
+html {
+  overflow-y: auto; /* ensure scrolling is allowed */
+}
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 450px;
+      margin: 70px auto;
+      background: rgba(0, 0, 0, 0.85);
+      border: 2px solid #00ffe7;
+      border-radius: 18px;
+      padding: 30px 25px;
+      box-shadow: 0 0 50px #00ffe7;
       text-align: center;
+      animation: fadeIn 1s ease-out;
     }
-    h2 {
-      color: green;
+
+    @keyframes fadeIn {
+      0% {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      color: #ffcc00;
+      font-size: 32px;
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
       margin-bottom: 10px;
     }
-    .username {
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 30px;
+
+    .subtitle {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 25px;
     }
+
     .btn {
       display: flex;
       align-items: center;
@@ -41,49 +73,131 @@
       gap: 10px;
       margin: 10px 0;
       padding: 14px;
-      background-color: #007bff;
-      color: #fff;
+      background-color: #00ff99;
+      color: #000;
       border: none;
       border-radius: 10px;
       font-size: 16px;
       text-decoration: none;
       transition: 0.3s;
     }
+
     .btn:hover {
-      background-color: #0056b3;
+      background: #00ffe7;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffe7;
     }
-    .logout-btn {
-      background-color: #ff4d4f;
-      margin-top: 20px;
+
+    .btn i {
+      margin-right: 10px;
+      font-size: 18px;
     }
-    .logout-btn:hover {
-      background-color: #d9363e;
+
+    .footer {
+      text-align: center;
+      font-size: 18px;
+      color: #39ff14;
+      margin-top: 25px;
     }
   </style>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <div class="card">
-    <h2>Welcome to Dashboard</h2>
-    <p class="username">You are successfully logged in as <strong>ALiasim</strong>.</p>
+<canvas id="bg"></canvas>
 
-    <a href="https://aliasimsimdetail.vercel.app" class="btn" target="_blank">
-      <i class="fas fa-globe"></i> Sim Database 1
-    </a>
-    <a href="https://asimsmm.site" class="btn" target="_blank">
-      <i class="fas fa-server"></i> SMM Panel
-    </a>
-    <a href="https://chat.whatsapp.com/HpXDLI1qnqwBDc4k5BqR4h" class="btn" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp Group
-    </a>
-    <a href="XtcsXtracker.html" class="btn">
-      <i class="fas fa-truck"></i> TCS Tracker
-    </a>
+<div class="container">
+  <h1>💻 𝐀𝐋𝐈𝐀𝐒𝐈𝐌 𝐌𝐎𝐃𝐒</h1>
+  <div class="subtitle">𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐓𝐇𝐄 𝐀𝐋𝐈𝐀𝐒𝐈𝐌 𝐌𝐎𝐃𝐒 𝐓𝐎𝐎𝐋𝐊𝐈𝐓</div>
 
-    <a href="https://whatsapp.com/channel/0029VawAFpk7oQhaVcrxgG06" class="btn logout-btn">
-      <i class="fas fa-sign-out-alt"></i> WHATSAPP CHANNEL
-    </a>
+  <a href="https://aliasimsimdetail.vercel.app" class="btn"><i class="fas fa-database"></i> Sim Database 1</a>
+  <a href="asimsmm.site" class="btn"><i class="fas fa-phone"></i> SMM PANEL</a>
+  <a href="https://chat.whatsapp.com/HpXDLI1qnqwBDc4k5BqR4h" class="btn"><i class="fas fa-id-card"></i> WHATSAPP GROUP</a>
+  <a href="https://whatsapp.com/channel/0029VawAFpk7oQhaVcrxgG06" class="btn"><i class="fas fa-globe"></i> Whatsapp Channel</a>
+  <a href="XlinkXLocker.html" class="btn"><i class="fas fa-lock"></i> Link Locker</a>
+  <a href="XtcsXtracker.html" class="btn"><i class="fas fa-shipping-fast"></i> TCS Tracker</a>
+  <a href="https://www.mediafire.com/file/3unggxl95mpgiqv/app3308330-xtm3vl.apk/file" class="btn"><i class="fas fa-phone"></i> ALI TOOLKIT</a>
+  <a href="https://t.me/AMxWpUnbanBot" class="btn"><i class="fas fa-globe"></i> Whatsapp Unban</a>
+  <a href="https://youtu.be/YJWYrKe4hco?si=IuyVWbjLo9dPorS1" class="btn"><i class="fas fa-lock"></i> Make Own Simdatabase Web</a>
+  <a href="XnetflixXfree.html" class="btn"><i class="fas fa-shipping-fast"></i> Free Netflix</a>
+  <a href="https://www.mediafire.com/file/ztnhv514h9carkg/AM+Whatsapp+Ban+Checker.apk/file" class="btn"><i class="fas fa-phone"></i> Whatsapp Ban Checker Apk</a>
+  <a href="XpromptToImage.html" class="btn"><i class="fas fa-phone"></i> Prompt To Image</a>
+  <a href="XcheapXHosting.html" class="btn"><i class="fas fa-phone"></i> Cheap Web Hosting</a>
+  <a href="https://asimtiktokdownloder.vercel.app/#" class="btn"><i class="fas fa-phone"></i> TIKTOK VIDEO DOWNLOAD</a>
+  <a href="https://www.mediafire.com/file/y201287zmjnic7r/CapCutModdedByJadoon_14.3.0.apk/file" class="btn"><i class="fas fa-phone"></i> CAPCUT PRO LATEST </a>
+  <a href="https://www.mediafire.com/file/vixn96ydx5uz1fs/WHATSAPP_HACK_METHOD.mp4/file" class="btn"><i class="fas fa-phone"></i> WHATSAPP HACK TRICK</a>
+  <a href="https://www.mediafire.com/file/watf6hh6jhgx995/GMAIL_WITHOUT_PHONE_NUMBERS_.zip/file" class="btn"><i class="fas fa-phone"></i> CREATE UNLIMITED GMAIL</a>
+  <a href="https://drive.google.com/drive/folders/1U_AFZGXBYRbbbq1-ZVCKdEHHpW9U9TKu" class="btn"><i class="fas fa-phone"></i> +48 POLAND FAKE NUMBER TRICK</a>
+  <a href="https://www.mediafire.com/file/ce6kgzo14a3pgjp/AVIATOR_HACK_FULLY_%25F0%259F%2592%25AF_WORKING_BY_PROXARMY_.zip/file" class="btn"><i class="fas fa-phone"></i> AVIATOR HACK</a>
+  <a href="https://www.mediafire.com/file/4f1cxqiev7gb6ty/PA_PLAYER.apk/file" class="btn"><i class="fas fa-phone"></i> MOD MX PLAYER</a>
+  <a href="https://www.mediafire.com/folder/rz2gc11gwpkza/WiFi+Hack+Method" class="btn"><i class="fas fa-phone"></i> WIFI HCK WORKING</a>
+  <a href="https://www.mediafire.com/folder/k6o6pedqipe6i/YouTube+Watch+time+apk" class="btn"><i class="fas fa-phone"></i> YOUTUBE WATCH TIME VIEW</a>
+  <a href="https://www.mediafire.com/folder/iwqsi736a7f8r/Tiktok+Viral+Tricks+By+JuNaid" class="btn"><i class="fas fa-phone"></i> TIKTOK VIDEO VIRAL TRICK</a>
+  <a href="https://www.mediafire.com/folder/i4xuk4jzi6rqv/Uk+Account+Tricks+Unlimited+Account+Tricks+by+JuNaid" class="btn"><i class="fas fa-phone"></i> TIKTOK USA ACCOUNT TRICK</a>
+  <a href="https://www.mediafire.com/file/3ptsa7okp8p9xo7/WhatsApp_Hack_Video/file" class="btn"><i class="fas fa-phone"></i> WHATSAPP HACK VIDEO</a>
+  <a href="https://www.mediafire.com/file/2c0jozvprtzsfrx/All_Social_Ban_%2526_Unban_1.0.0.apk/file" class="btn"><i class="fas fa-phone"></i> ALL SOCAIL MEDIA BAN UNBAN</a>
+  <a href="https://www.mediafire.com/file/qmthezoag341jb0/Temp+Mail_ModdedHackerJadoon3.49.apk/file" class="btn"><i class="fas fa-phone"></i> TEMP MAIL PREMIUM</a>
+  <a href="https://www.imei.info/" class="btn"><i class="fas fa-phone"></i> IMEI INFO</a>
+  <a href="https://www.mediafire.com/file/4p1wtiv3hsvj7uv/Photoroom%20Pro%20v5.2.8%20-%20espacioapk.com.apk/file?dkey=z5iw3mtba2n&r=103" class="btn"><i class="fas fa-phone"></i> PHOTO ROOM PRO</a>
+  <a href="https://www.mediafire.com/file/075qtyzdngswo2v/app3572857-va70ou.apk/file" class="btn"><i class="fas fa-phone"></i> AI TOOL</a>
+  <a href="https://www.mediafire.com/file/dh8rvx48x530nr9/%255B%25F0%259D%2590%258E%25F0%259D%2590%258B%25F0%259D%2590%2583_%25F0%259D%2590%2587%25F0%259D%2590%2580%25F0%259D%2590%2582%25F0%259D%2590%258A%25F0%259D%2590%2584%25F0%259D%2590%2591%255D_%255BUNBAN_APK%255D_1.0.apk/file" class="btn"><i class="fas fa-phone"></i> whatsapp number unban</a>
+  <a href="https://www.mediafire.com/file/f8shun6xzcnmy7k/WA_Number_Hide_By_AbheeBhai.zip/file" class="btn"><i class="fas fa-phone"></i> whatsapp number hide</a>
+  <a href="https://www.mediafire.com/file/n5wbunbhp4qa8zq/Fake_card_maker.apk/file" class="btn"><i class="fas fa-phone"></i> FAKE CARD MAKE</a>
+  <a href="https://www.mediafire.com/file/muxnfrta2y8dyq2/Modify_Any_Apk_LEAKED_By_AbheeBhai_Mods.zip/file" class="btn"><i class="fas fa-phone"></i> HACK ANY APP</a>
+  <a href="https://www.mediafire.com/file/ng58l6rvthowf8d/SuperVPN_PATCHED_BY_ABHEEBHAI.apk/file" class="btn"><i class="fas fa-phone"></i> SUPER VPN PACTH</a>
+  <a href="https://www.mediafire.com/file/x871rqnd1uo9elb/UNKOWNSACALLKROUNLIMITEDMETHODBYJADOON.zip/file" class="btn"><i class="fas fa-phone"></i> whatsapp fake number trick</a>
+  <a href="https://drive.google.com/drive/folders/1m5DfU--H34NqUyJRcC4h3nf4A_EvGTfb" class="btn"><i class="fas fa-phone"></i> LIVE CAMERA HACK</a>
+  <a href="https://www.mediafire.com/file/uoldfmhukzbuy75/WhatsApp_Otp_lock_Method_By_AbheeBhai_Mods.zip/file" class="btn"><i class="fas fa-phone"></i> WHATSAPP OTP LOCK</a>
+  <a href="https://www.mediafire.com/file/vu8cn35sxe0oy4a/NetFlix_Premium_%2528Mirror%2529_By_Amaan_Hacker_%25F0%259F%2594%25A5.apk/file" class="btn"><i class="fas fa-phone"></i> NETFLIX PRO</a>
+  <a href="https://drive.google.com/drive/folders/13fZNd3W2P3RgS0qArzL4OHpfzNbKoxQ9" class="btn"><i class="fas fa-phone"></i> GMAIL WITHOUT NUMBER</a>
+  <a href="https://www.mediafire.com/folder/xe91rzlufr0da/JazzCash_Mod_2024" class="btn"><i class="fas fa-phone"></i> JAZZCASH MOD</a>
+  
+  <div class="footer">
+    &copy; 2025 - Powered by ALIASIM Mods
   </div>
+</div>
+
+<!-- Background Animation Script -->
+<script>
+  const canvas = document.getElementById("bg");
+  const ctx = canvas.getContext("2d");
+
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const matrix = "01";
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+  const drops = Array.from({ length: columns }).fill(1);
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ffe7";
+    ctx.font = ${fontSize}px monospace;
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = matrix[Math.floor(Math.random() * matrix.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 35);
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
 
 </body>
-</html>
+                                                              </html>
